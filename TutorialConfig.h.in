@@ -1,0 +1,26 @@
+/**
+ * @file TutorialConfig.h.in
+ * @brief CMake 配置头文件模板
+ * 
+ * 此文件由 CMake 的 configure_file 命令处理，生成包含项目版本信息的头文件。
+ * 这是现代 CMake 中将构建时信息传递给源码的标准做法。
+ */
+
+#ifndef TUTORIAL_CONFIG_H
+#define TUTORIAL_CONFIG_H
+
+// 项目版本信息 - 由 CMake 的 project() 命令自动填充
+#define Tutorial_VERSION_MAJOR @CMakeTutorial_VERSION_MAJOR@
+#define Tutorial_VERSION_MINOR @CMakeTutorial_VERSION_MINOR@
+#define Tutorial_VERSION_PATCH @CMakeTutorial_VERSION_PATCH@
+#define Tutorial_VERSION "@CMakeTutorial_VERSION@"
+
+// 系统内省结果 - 在配置阶段自动探测
+#cmakedefine HAVE_LOG
+#cmakedefine HAVE_EXP
+#cmakedefine HAVE_SQRT
+
+// 平台特性
+#cmakedefine USE_MYMATH
+
+#endif // TUTORIAL_CONFIG_H
