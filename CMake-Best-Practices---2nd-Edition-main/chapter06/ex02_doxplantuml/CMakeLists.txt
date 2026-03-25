@@ -3,6 +3,8 @@
 #
 # SPDX-License-Identifier: MIT
 
+cmake_minimum_required(VERSION 3.21)
+
 project(
   ch6_ex02_doxplantuml
   VERSION 1.0

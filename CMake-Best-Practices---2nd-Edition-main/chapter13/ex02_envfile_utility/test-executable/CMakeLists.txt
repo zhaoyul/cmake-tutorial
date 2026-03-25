@@ -3,6 +3,8 @@
 #
 # SPDX-License-Identifier: MIT
 
+cmake_minimum_required(VERSION 3.21)
+
 project(
   ch13_ex02_envfile_utility_test
   VERSION 1.0

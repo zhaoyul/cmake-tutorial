@@ -2,6 +2,8 @@
 #
 # SPDX-License-Identifier: MIT
 
+cmake_minimum_required(VERSION 3.21)
+
 project(
     ch2_framework_component2
     VERSION 1.0

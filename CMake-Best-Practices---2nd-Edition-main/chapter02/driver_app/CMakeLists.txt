@@ -2,6 +2,8 @@
 #
 # SPDX-License-Identifier: MIT
 
+cmake_minimum_required(VERSION 3.21)
+
 # Project directive is used for creating a child project for the targets we're
 # going to create for the component. This will allow us to use project()
 # variables in target creation.

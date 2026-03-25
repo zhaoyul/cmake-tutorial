@@ -32,6 +32,7 @@ install(TARGETS ch4_ex07_executable
         RUNTIME_DEPENDENCIES
         PRE_EXCLUDE_REGEXES "api-ms-.*" "ext-ms-.*"
         POST_EXCLUDE_REGEXES ".*system32/.*\\.dll"
+        FRAMEWORK DESTINATION lib
         )
 
 # We will not explicitly specify project name and version here and 
