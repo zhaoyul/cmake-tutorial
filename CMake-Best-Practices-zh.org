@@ -212,7 +212,7 @@ CMake suite is maintained and supported by Kitware (kitware.com/cmake).
 
 现在,是时候动手看看你的安装是否成功了. 我们提供了一个简单的 hello world 项目示例,你可以立即下载并构建. 打开控制台,输入以下内容,你就可以开始了:
 
-#+BEGIN_SRC bash
+#+BEGIN_SRC bash :results raw
 git clone https://github.com/PacktPublishing/CMake-Best-Practices--2nd-Edition.git
 cd CMake-Best-Practices---2nd-Edition/chapter01/simple_executable
 cmake -S . -B build

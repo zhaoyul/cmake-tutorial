@@ -28,16 +28,16 @@ if(CHAPTER1_PRINT_LANGUAGE_EXAMPLES)
         message(STATUS "Chapter1: welcome to chapter 1!")
     endif()
     #examples for list operations
-    set(MYLIST abc def ghi) 
+    set(MYLIST abc def ghi)
     message(STATUS "Chapter1: MYLIST is: ${MYLIST}")
-    set(MYLIST "abc;def;ghi") 
+    set(MYLIST "abc;def;ghi")
     message(STATUS "Chapter1: MYLIST is: ${MYLIST}")
-    list(APPEND MYLIST "xyz") 
+    list(APPEND MYLIST "xyz")
     message(STATUS "Chapter1: MYLIST is: ${MYLIST}")
 
     #find the string abc in MYLIST and store it in ABC_INDEX
-    list(FIND MYLIST abc ABC_INDEX) 
-    list(GET MYLIST ${ABC_INDEX} ABC) 
+    list(FIND MYLIST abc ABC_INDEX)
+    list(GET MYLIST ${ABC_INDEX} ABC)
     message(STATUS "Chapter1: Index of 'def' in MYLIST is ${ABC_INDEX} the value at the index is '${ABC}'")
 
     # add MYVAR as cache variable with the value foo
@@ -50,24 +50,24 @@ if(CHAPTER1_PRINT_LANGUAGE_EXAMPLES)
 
     # loop examples
     set(MYVAR 0)
-    while(MYVAR LESS "5") 
+    while(MYVAR LESS "5")
         message(STATUS "Chapter1: MYVAR is '${MYVAR}'")
-        math(EXPR MYVAR "${MYVAR}+1") 
-    endwhile() 
+        math(EXPR MYVAR "${MYVAR}+1")
+    endwhile()
 
-    foreach(ITEM IN LISTS MYLIST) 
+    foreach(ITEM IN LISTS MYLIST)
         message(STATUS "Chapter1: ITEM from MYLIST is '${ITEM}'")
-    endforeach() 
+    endforeach()
 
-    foreach(ITEM RANGE 0 5) 
+    foreach(ITEM RANGE 0 5)
         message(STATUS "Chapter1: ITEM from RANGE is '${ITEM}'")
-    endforeach() 
+    endforeach()
 
     # function example
-    function(foo ARG1) 
+    function(foo ARG1)
         message(STATUS "Chapter1: foo called with '${ARG1}'")
-    endfunction() 
+    endfunction()
 
-    # invoke foo with parameter bar 
-    foo(“bar”) 
+    # invoke foo with parameter bar
+    foo(“bar”)
 endif()

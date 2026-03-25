@@ -1,7 +1,7 @@
 /**
  * @file mysqrt.cxx
  * @brief 数学计算模块的实现
- * 
+ *
  * 演示跨平台代码和条件编译
  */
 
@@ -27,7 +27,7 @@ const char* getVersion() {
 const char* getFeatures() {
     std::ostringstream oss;
     oss << "Features: ";
-    
+
 #ifdef HAVE_LOG
     oss << "LOG ";
 #endif
@@ -46,14 +46,14 @@ const char* getFeatures() {
 
 /**
  * @brief 牛顿迭代法计算平方根
- * 
+ *
  * 当系统 sqrt 不可用时，使用此备选实现
  */
 double newtonSqrt(double x) {
     if (x <= 0) {
         return 0;
     }
-    
+
     double result = x;
     // 迭代10次达到足够精度
     for (int i = 0; i < 10; ++i) {
@@ -83,7 +83,7 @@ double mylog(double x) {
     // 简单的近似实现
     if (x <= 0) return 0;
     if (x == 1) return 0;
-    
+
     // 使用泰勒展开近似
     double y = (x - 1) / (x + 1);
     double result = 0;
