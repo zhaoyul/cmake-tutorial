@@ -56,6 +56,23 @@ Run the installed executable:
 ./build/install/bin/Tutorial 36
 ```
 
+### Multi-Configuration Generators
+
+The commands above assume a single-configuration generator such as Unix Makefiles
+or Ninja. If you configure with Xcode, Visual Studio, or Ninja Multi-Config,
+pass the configuration explicitly and replace `Debug` with the configuration you
+built:
+
+```bash
+cmake --build build --config Debug
+ctest --test-dir build -C Debug --output-on-failure
+cmake --install build --config Debug --prefix build/install
+```
+
+Before installation, run that configuration with
+`./build/src/Debug/Tutorial 36`; after installation, use the same
+`./build/install/bin/Tutorial 36` command shown above.
+
 ## What You Should See
 
 The executable prints one section per teaching point:
